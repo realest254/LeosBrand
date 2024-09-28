@@ -6,7 +6,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(to top, #1b1b2f, rgba(27, 27, 47, 0.9)); /* Gradient to match category */
+  background-color: #1b1b2f; /* Close to the previous color but more neutral */
   color: #ffffff;
   overflow: hidden; /* Prevents overflow from carousel */
 }
@@ -36,7 +36,7 @@
 
 .carousel-wrapper {
   display: flex;
-  animation: scroll 60s linear infinite; /* Maintain auto-scroll */
+  animation: scroll 100s linear infinite; /* Maintain auto-scroll */
   will-change: transform; /* Hint for browser to optimize */
 }
 
@@ -52,9 +52,10 @@
 
 /* Adjust carousel item image styling */
 .carousel-item img {
-  width: 90%; /* Ensure the image covers the entire width */
-  height: 400px; /* Set height */
+  width: 70%; /* Ensure the image covers the entire width */
+  height: 350px; /* Set height */
   object-fit: cover;
+  filter: brightness(1.1) contrast(1.0);
   border-radius: 12px; /* Matches category card style */
   box-shadow: 0 4px 20px rgba(0, 163, 255, 0.3); /* Adds shadow for depth */
 }

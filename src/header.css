@@ -1,0 +1,61 @@
+header {
+    position: relative; /* Ensure the header stays on top */
+    width: 100%; /* Full width */
+    z-index: 10; /* Keep the header above other elements */
+  }
+  
+  .nav-container {
+    background-color: #1b1b2f; /* Close to the previous color but more neutral */
+    padding: 20px 50px; /* Padding for spacing */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: none;
+  }
+  
+  .brand {
+    font-size: 28px; /* Font size for the brand */
+    font-weight: bold;
+    color: #00a3ff; /* Neon blue color */
+    text-shadow: 0 0 10px rgba(0, 163, 255, 0.7), 0 0 20px rgba(0, 163, 255, 0.5); /* Neon glow effect */
+    font-family: 'Poppins', sans-serif; /* Consistent font */
+  }
+  
+  .nav-links {
+    display: flex;
+    list-style: none;
+  }
+  
+  .nav-links li {
+    margin: 0 15px; /* Space between links */
+    cursor: pointer;
+  }
+  
+  .nav-links li a {
+    text-decoration: none; /* Remove underline */
+    color: #c7d5ff; /* Light blue color for links */
+    transition: color 0.3s; /* Smooth transition for hover effect */
+  }
+  
+  /* Change link color on hover */
+  .nav-links li a:hover {
+    color: #00a3ff; /* Bright blue on hover */
+  }
+  
+  .nav-icons {
+    display: flex;
+    align-items: center;
+    color: white;
+  }
+  
+  .nav-icons .icon {
+    margin-left: 20px; /* Space between icons */
+    font-size: 20px; /* Icon size */
+    cursor: pointer;
+    transition: color 0.3s; /* Smooth transition for hover effect */
+  }
+  
+  .nav-icons .icon:hover {
+    color: #00a3ff; /* Bright blue on hover */
+  }
+  

@@ -1,0 +1,82 @@
+.contact-section {
+    min-height: 65vh;
+    background-color: #1b1b2f; /* Background color matching your theme */
+    padding: 50px 20px; /* Add some padding for space */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .contact-content {
+    background: rgba(10, 10, 10, 0.7); /* Semi-transparent background for the content */
+    border: 2px solid #00a3ff; /* Cool-looking border */
+    border-radius: 15px; /* Rounded corners */
+    padding: 40px;
+    max-width: 600px; /* Limit width for a better look */
+    box-shadow: 0 0 20px rgba(0, 163, 255, 0.3); /* Shadow for depth */
+    transition: border-color 0.3s ease; /* Transition for border color change */
+  }
+  
+  .contact-content:hover {
+    border-color: #ff7a00; /* Change border color on hover */
+  }
+  
+  .contact-content h2 {
+    color: #c7d5ff; /* Title color */
+    text-align: center; /* Center title */
+    margin-bottom: 20px; /* Space below title */
+  }
+  
+  .form-group {
+    margin-bottom: 15px; /* Space between form fields */
+    position: relative; /* Position relative for absolute positioning of labels */
+  }
+  
+  label {
+    color: #c7d5ff; /* Label color */
+    position: absolute; /* Position absolute for animation */
+    left: 10px; /* Space from left */
+    top: 10px; /* Space from top */
+    transition: all 0.3s ease; /* Transition for smooth animation */
+    pointer-events: none; /* Ignore mouse events */
+  }
+  
+  input,
+  textarea {
+    width: 100%; /* Full width of the parent */
+    padding: 10px; /* Padding for comfort */
+    border: 1px solid #00a3ff; /* Input border color */
+    border-radius: 5px; /* Rounded input corners */
+    background: rgba(255, 255, 255, 0.1); /* Input background color */
+    color: white; /* Text color */
+  }
+  
+  input:focus,
+  textarea:focus {
+    border-color: #ff7a00; /* Change border color on focus */
+  }
+  
+  input:focus + label,
+  textarea:focus + label,
+  input:not(:placeholder-shown) + label,
+  textarea:not(:placeholder-shown) + label {
+    top: -10px; /* Move label up when input is focused or not empty */
+    left: 8px; /* Adjust left position */
+    font-size: 0.9rem; /* Reduce font size */
+    color: #ff7a00; /* Change label color on focus */
+  }
+  
+  button {
+    background-color: #ff7a00; /* Button background */
+    color: white; /* Button text color */
+    border: none; /* No border */
+    border-radius: 30px; /* Rounded button */
+    padding: 12px 24px; /* Button padding */
+    cursor: pointer; /* Pointer on hover */
+    transition: background-color 0.3s ease; /* Smooth background transition */
+  }
+  
+  button:hover {
+    background-color: #cc6200; /* Darker button on hover */
+  }
+  

@@ -1,107 +1,23 @@
-* {
-  box-sizing:border-box;
-}
 .hero-container {
-  height: 100vh;
+  min-height: 100vh; /* Keep this to ensure full height */
   display: flex;
   flex-direction: column;
-  background: linear-gradient(130deg, rgba(10, 10, 10, 0.7), rgba(20, 20, 30, 0.6)), 
-              linear-gradient(to bottom, rgba(27, 27, 47, 0.5), #1b1b2f); 
-  color: white;
-  background-size: cover;
+  background-color: #1b1b2f; /* Close to the previous color but more neutral */
   font-family: 'Arial', sans-serif;
   position: relative;
-  overflow: hidden;
-  backdrop-filter: blur(10px);
-  box-shadow: inset 0 0 50px rgba(255, 255, 255, 0.1);
-  background-size: cover;
+  overflow: hidden; /* Keep this to hide any overflow */
 }
 
-.hero-container:before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: radial-gradient(circle at top, rgba(255, 255, 255, 0.2), transparent 60%);
-  z-index: 1;
-}
-
-.hero-container:after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.6);
-  z-index: 2;
-}
-
+/* Keep nav style intact */
 .hero-nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 20px 50px;
-  z-index: 3;
+  z-index: 3; /* Make sure this is on top */
 }
 
-.brand {
-  font-size: 28px; /* Increase font size */
-  font-weight: bold;
-  color: #00a3ff;
-  text-shadow: 0 2px 5px rgba(0, 163, 255, 0.7); /* Add shadow */
-  font-family: 'Poppins', sans-serif; /* Consistent font */
-}
-
-.nav-links {
-  display: flex;
-  list-style: none;
-}
-
-.nav-links li {
-  margin: 0 15px;
-  cursor: pointer;
-  position: relative;
-  font-size: 18px;
-  color: #c7d5ff;
-  transition: color 0.3s;
-}
-
-/* Remove underline and set color for navigation links */
-.nav-links li a {
-  text-decoration: none; /* Remove underline */
-  color: inherit; /* Inherit the color from the list item */
-  transition: color 0.3s; /* Smooth transition for hover effect */
-}
-
-/* Ensure links change color on hover */
-.nav-links li:hover a {
-  color: #00a3ff; /* The same hover color as list item */
-}
-
-/* Ensure links maintain their color */
-.nav-links li a:visited, 
-.nav-links li a:active {
-  color: inherit;
-}
-
-.nav-links li:hover {
-  color: #00a3ff;
-}
-
-.nav-icons .icon {
-  margin-left: 20px;
-  font-size: 20px;
-  cursor: pointer;
-  transition: color 0.3s;
-}
-
-.nav-icons .icon:hover {
-  color: #00a3ff;
-}
-
+/* Ensure consistent layout */
 .hero-content {
   display: flex;
   justify-content: space-between;
@@ -111,20 +27,23 @@
   opacity: 0; /* Initially hidden */
   transform: translateY(30px); /* Slightly move down */
   transition: opacity 1s ease, transform 1s ease;
-  z-index: 3;
+  z-index: 3; /* Ensure it stays above other elements */
 }
 
+/* When loaded, transition smoothly */
 .hero-content.loaded {
-  opacity: 1; /* Show when loaded */
-  transform: translateY(0); /* Move to original position */
+  opacity: 1;
+  transform: translateY(0);
 }
 
+/* Text styles */
 .hero-text {
   max-width: 50%;
 }
 
+/* Headline styles */
 .hero-text h1 {
-  font-size: 4.5rem; /* Make it more impactful */
+  font-size: 4.5rem;
   margin-bottom: 10px;
   color: #c7d5ff;
   text-shadow: 0 4px 20px rgba(0, 163, 255, 0.7);
@@ -135,7 +54,7 @@
 }
 
 .tagline {
-  font-size: 1.5rem; /* Slightly larger */
+  font-size: 1.5rem;
   margin-bottom: 15px;
   color: #a1b5d8;
   text-shadow: 0 2px 4px rgba(0, 163, 255, 0.3);
@@ -165,15 +84,16 @@
   background-color: #cc6200;
 }
 
+/* Hero image section */
 .hero-image {
-  width: 55%; /* Slightly more space */
+  width: 75%;
   height: 100%;
   display: flex;
   justify-content: flex-end;
   align-items: center;
   filter: brightness(1.3) contrast(1.1);
   position: relative;
-  z-index: 3;
+  z-index: 3; /* Keep above other elements */
 }
 
 .hero-image img {
@@ -188,10 +108,11 @@
 }
 
 .hero-content.loaded .hero-image img {
-  visibility: visible; /* Show when loaded */
-  opacity: 1; /* Show when loaded */
+  visibility: visible;
+  opacity: 1;
 }
 
+/* Keyframes */
 @keyframes fadeInUp {
   from {
     opacity: 0;
@@ -203,6 +124,7 @@
   }
 }
 
+/* Responsive Styles */
 @media (max-width: 768px) {
   .hero-content {
     flex-direction: column;

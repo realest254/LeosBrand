@@ -1,0 +1,50 @@
+/* General container styles */
+.category-page {
+  padding: 2rem;
+  background-color: #1b1b2f; /* Solid background color */
+  color: #ffffff;
+  text-align: center;
+}
+
+/* Title styling */
+.category-title {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color: #c7d5ff;
+  text-shadow: 0 2px 10px rgba(0, 163, 255, 0.5);
+}
+
+/* Flexibility using Grid */
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive grid */
+  gap: 2rem; /* Space between cards */
+  justify-content: center;
+  align-items: stretch; /* Make all cards the same height */
+}
+
+/* Card styles */
+.card {
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 163, 255, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background-color: #2c2c3e; /* Dark card background */
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 30px rgba(0, 163, 255, 0.5);
+}
+
+/* Card image styling */
+.card img {
+  width: 100%;
+  height: 250px; /* Slightly taller for better display */
+  object-fit: cover;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
