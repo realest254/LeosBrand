@@ -1,3 +1,7 @@
+body {
+  margin: 0px;
+  padding: 0px;
+}
 .hero-container {
   min-height: 100vh; /* Keep this to ensure full height */
   display: flex;
@@ -138,5 +142,80 @@
   }
   .hero-text {
     max-width: 90%;
+  }
+}
+
+/* ... (keep all existing styles above the media query) ... */
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .hero-container {
+    padding: 20px;
+  }
+
+  .hero-content {
+    flex-direction: column-reverse;
+    padding: 0;
+    justify-content: center;
+    height: 100vh;
+  }
+
+  .hero-image {
+    width: 100%;
+    height: 40vh;
+    margin-bottom: 20px;
+    justify-content: center;
+  }
+
+  .hero-image img {
+    width: auto;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 10px;
+  }
+
+  .hero-text {
+    max-width: 100%;
+    text-align: center;
+    padding: 0 20px;
+  }
+
+  .hero-text h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+  }
+
+  .tagline {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+  }
+
+  .description {
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+  }
+
+  .cta-button {
+    padding: 10px 20px;
+    font-size: 1rem;
+  }
+}
+
+/* Additional styles for even smaller screens */
+@media (max-width: 480px) {
+  .hero-text h1 {
+    font-size: 2rem;
+  }
+
+  .tagline {
+    font-size: 1rem;
+  }
+
+  .description {
+    font-size: 0.8rem;
+  }
+
+  .hero-image {
+    height: 35vh;
   }
 }

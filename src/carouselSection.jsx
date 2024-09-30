@@ -1,12 +1,10 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import './carouselSection.css'; // Importing the CSS for styling
+import './carouselSection.css';
 
 // Importing images
 import image1 from './images/carslres1.jpg';
 import image2 from './images/yellowHD1.jpg';
 import image3 from './images/redT1.jpg';
-
 import image5 from './images/cap2.jpg';
 import image6 from './images/yellowHD2.jpg';
 import image7 from './images/greenT1.jpg';
@@ -17,8 +15,8 @@ import image11 from './images/Hood4.jpg';
 import image12 from './images/greenT3.jpg';
 import image13 from './images/cap3.jpg';
 
-const images = [image1, image2, image3,  image5, image6,image7, image8, image9, image10, image11, image12, image13]; // Original images
-const extendedImages = [...images, ...images, ...images]; // Duplicate images for continuous effect
+const images = [image1, image2, image3, image5, image6, image7, image8, image9, image10, image11, image12, image13];
+const extendedImages = [...images, ...images, ...images]; // Duplication for infinite scroll
 
 const Carousel = () => {
   return (

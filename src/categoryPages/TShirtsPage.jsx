@@ -19,7 +19,7 @@ function TShirts() {
       <div className="card-container">
         {tshirtImages.map((image, index) => (
           <div className="card" key={index}>
-            <img src={image} alt={`T-Shirt ${index + 1}`} />
+            <img src={image} alt={`T-Shirt ${index + 1}`} loading="lazy" />
           </div>
         ))}
       </div>

@@ -20,7 +20,7 @@ function Hoodies() {
       <div className="card-container">
         {hoodieImages.map((image, index) => (
           <div className="card" key={index}>
-            <img src={image} alt={`Hoodie ${index + 1}`} />
+            <img src={image} alt={`Hoodie ${index + 1}`} loading='lazy' />
           </div>
         ))}
       </div>

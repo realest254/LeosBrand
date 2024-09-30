@@ -15,7 +15,7 @@ function Caps() {
       <div className="card-container">
         {capImages.map((image, index) => (
           <div className="card" key={index}>
-            <img src={image} alt={`Cap ${index + 1}`} />
+            <img src={image} alt={`Cap ${index + 1}`} loading='lazy'/>
           </div>
         ))}
       </div>
