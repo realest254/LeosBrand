@@ -70,14 +70,16 @@
     font-size: 2rem;
   }
 
-  .carousel-item {
-    min-width: 80%; /* Occupy most of the screen width on mobile */
-  }
-
-  .carousel-item img {
-    width: 90%; /* Scale the images for better fit on mobile */
-    height: 250px; /* Reduce the height for mobile */
-  }
+/* Carousel item styling */
+.carousel-item {
+  min-width: 80%; /* Each image takes 1/3 width of the container */
+  display: flex;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+  backface-visibility: hidden; /* Prevents blurring */
+}
+ 
 }
 
 @media (max-width: 480px) {
