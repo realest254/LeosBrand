@@ -1,3 +1,4 @@
+/* Main shop container styling */
 .shop-container {
   min-height: 100vh;
   background-color: #1e1e1e;
@@ -9,21 +10,24 @@
   justify-content: center;
 }
 
+/* Shop message section styling */
 .shop-message-section {
   text-align: center;
   margin-bottom: 30px;
 }
 
+/* Shop message styling */
 .shop-message {
   font-size: 2rem;
   font-weight: bold;
   line-height: 1.6;
   max-width: 600px;
   margin: 0 auto;
-  color: #c7d5ff;
+  color: #a1b5d8;
   position: relative;
 }
 
+/* Animation for magic letters */
 .magic-word {
   display: inline-block;
 }
@@ -52,11 +56,13 @@
   }
 }
 
+/* Space for magic letters */
 .space {
   display: inline-block;
   width: 0.25em;
 }
 
+/* Shop button styling */
 .shop-button {
   display: inline-block;
   margin-top: 20px;
@@ -73,6 +79,7 @@
   background: linear-gradient(135deg, #ff3366, #ffcc33);
 }
 
+/* Shop instructions styling */
 .shop-instructions {
   background-color: #292929;
   padding: 30px;
@@ -108,4 +115,82 @@
 .shop-instructions li span {
   font-weight: bold;
   color: #ffcc00;
+}
+
+/* Mobile Screens (up to 480px) */
+@media (max-width: 480px) {
+  .shop-message {
+    font-size: 1.5rem; /* Smaller font size for mobile */
+    max-width: 90%; /* Wider max-width for smaller screens */
+  }
+
+  .shop-button {
+    font-size: 1rem; /* Smaller button font */
+    padding: 10px 20px; /* Reduced padding */
+  }
+
+  .shop-instructions h2 {
+    font-size: 1.2rem; /* Smaller heading for instructions */
+  }
+
+  .shop-instructions li {
+    font-size: 1rem; /* Smaller font for list items */
+  }
+
+  .shop-instructions {
+    padding: 20px; /* Reduced padding */
+  }
+  .magic-word {
+    font-size: 1.1rem;
+  }
+}
+
+/* Tablet Screens (up to 768px) */
+@media (max-width: 768px) {
+  .shop-message {
+    font-size: 1.75rem; /* Medium font size for tablets */
+    max-width: 80%; /* Adjusted max-width for better visibility */
+  }
+
+  .shop-button {
+    font-size: 1.1rem; /* Slightly smaller button font */
+    padding: 10px 22px; /* Adjusted padding */
+  }
+
+  .shop-instructions h2 {
+    font-size: 1.4rem; /* Slightly smaller heading */
+  }
+
+  .shop-instructions li {
+    font-size: 1.05rem; /* Slightly smaller font for list items */
+  }
+
+  .shop-instructions {
+    padding: 25px; /* Adjusted padding for better aesthetics */
+  }
+}
+
+/* Screens between 768px and 1200px */
+@media (min-width: 768px) and (max-width: 1200px) {
+  .shop-message {
+    font-size: 1.8rem; /* Medium font size for larger tablets */
+    max-width: 70%; /* More limited max-width */
+  }
+
+  .shop-button {
+    font-size: 1.1rem; /* Maintain button font size */
+    padding: 12px 24px; /* Adjusted padding */
+  }
+
+  .shop-instructions h2 {
+    font-size: 1.6rem; /* Adjusted heading size */
+  }
+
+  .shop-instructions li {
+    font-size: 1.1rem; /* Keep list item size consistent */
+  }
+
+  .shop-instructions {
+    padding: 30px; /* Maintain padding */
+  }
 }

@@ -1,3 +1,4 @@
+// Importing React and CSS
 import React from 'react';
 import './carouselSection.css';
 
@@ -15,6 +16,7 @@ import image11 from './images/Hood4.jpg';
 import image12 from './images/greenT3.jpg';
 import image13 from './images/cap3.jpg';
 
+// Carousel images array
 const images = [image1, image2, image3, image5, image6, image7, image8, image9, image10, image11, image12, image13];
 const extendedImages = [...images, ...images, ...images]; // Duplication for infinite scroll
 
