@@ -1,20 +1,21 @@
 /* Main section styling */
 .carousel-section {
   position: relative;
-  height: 100vh;
+  height: 100vh; 
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start; /* Changed from center */
   align-items: center;
-  background-color: #1b1b2f; /* Consistent neutral background */
+  background-color: #1b1b2f;
   color: #ffffff;
-  overflow: hidden; /* Prevents overflow from carousel */
+  overflow: hidden;
+  padding: 2rem 0; /* Added padding instead of full height */
 }
 
 /* Neon title styling */
 .carousel-title {
   font-size: 3rem;
-  margin-bottom: 20px;
+  margin-bottom: 2rem; /* Adjusted for closer proximity to images */
   color: #c7d5ff;
   text-shadow: 0 2px 10px rgba(0, 163, 255, 0.5);
   background: linear-gradient(to right, #00c6ff, #0072ff);
@@ -26,118 +27,81 @@
 /* Carousel container */
 .carousel {
   width: 100%;
-  height: 100%;
+  overflow: hidden;
+  flex-grow: 1; /* Allow it to take remaining space */
   display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden; /* Hide overflow for smooth transition */
-  padding: 0 10px; /* Add padding to the carousel for alignment */
+  align-items: center; /* Center images vertically in remaining space */
 }
 
 .carousel-wrapper {
   display: flex;
-  animation: scroll 100s linear infinite; /* Maintain auto-scroll */
-  will-change: transform; /* Hint for browser to optimize */
+  width: fit-content;
+  animation: scroll 400s linear infinite; /* Adjusted to 400s as requested */
+  transform: translateZ(0);
 }
 
 /* Carousel item styling */
 .carousel-item {
-  min-width: calc(33.33% - 20px); /* Adjust width to account for margins */
-  display: flex;
-  justify-content: center;
-  padding: 0;
-  margin: 0 10px; /* Add horizontal margin for spacing */
-  backface-visibility: hidden; /* Prevents blurring */
+  min-width: 300px;
+  margin: 0 10px;
+  flex-shrink: 0;
 }
 
 .carousel-item img {
-  width: 100%; /* Maintain full width of the item */
-  height: 400px; /* Increased height for images */
+  width: 100%;
+  height: 400px;
   object-fit: cover;
-  border-radius: 20px; /* Increased rounding of the borders */
+  border-radius: 20px;
   filter: brightness(1.1) contrast(1.0);
   box-shadow: 0 4px 20px rgba(0, 163, 255, 0.3);
 }
 
 /* Keyframes for continuous scrolling */
 @keyframes scroll {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-200%); } /* Two full widths */
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
 }
 
-/* Mobile responsive */
+/* Tablet screens (up to 768px) */
 @media (max-width: 768px) {
-  .carousel-title {
-    font-size: 2rem;
+  .carousel-section {
+    height: 70vh; /* Even more reduced height for tablets */
   }
 
   .carousel-item {
-    min-width: 80%; /* Each image takes 80% width on smaller screens */
-    display: flex;
-    justify-content: center;
-    padding: 0;
-    margin: 0;
-    backface-visibility: hidden; /* Prevents blurring */
+    min-width: 250px;
   }
-}
-
-/* General Carousel Section Styles */
-.carousel-section {
-  padding: 20px 0; /* Reduced padding for top and bottom */
-  text-align: center;
-}
-
-.carousel-title {
-  font-size: 2rem;
-  margin-bottom: 20px;
-}
-
-.carousel-wrapper {
-  display: flex;
-  transition: transform 0.5s ease-in-out;
-  will-change: transform;
-}
-
-.carousel-item {
-  flex: 0 0 auto;
-}
-
-/* Mobile Screens (up to 480px) */
-@media (max-width: 480px) {
+  
+  .carousel-item img {
+    height: 300px;
+  }
+  
   .carousel-title {
-    font-size: 1.5rem; /* Smaller font size for mobile */
-  }
-
-  .carousel-wrapper {
-    gap: 10px; /* Space between images on smaller screens */
-  }
-
-  .carousel-item img {
-    width: 80%;
-    height: 200px; /* Reduced height for smaller screens */
-    object-fit: cover;
-    filter: brightness(1.3) contrast(1.0);
-    border-radius: 20px; /* Keep the same rounded border */
-    box-shadow: 0 4px 20px rgba(0, 163, 255, 0.3);
-  }
-
-  .carousel-section {
-    padding: 10px 0; /* Minimal padding to reduce space above/below images */
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
   }
 }
 
-/* Tablet Screens (up to 768px) */
-@media (max-width: 768px) {
-  .carousel-wrapper {
-    gap: 15px; /* Moderate space between images for tablets */
+/* Mobile screens (up to 480px) */
+@media (max-width: 480px) {
+  .carousel-section {
+    height: 60vh; /* Further reduced height for mobile */
   }
 
+  .carousel-item {
+    min-width: 200px;
+  }
+  
   .carousel-item img {
-    width: 80%;
-    height: 400px; /* Slightly larger height for tablet screens */
-    object-fit: cover;
-    filter: brightness(1.1) contrast(1.0);
-    border-radius: 20px; /* Keep the same rounded border */
-    box-shadow: 0 4px 20px rgba(0, 163, 255, 0.3);
+    height: 250px;
+  }
+  
+  .carousel-title {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
   }
 }

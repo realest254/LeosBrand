@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import emailjs from '@emailjs/browser';
 import './contact.css';
 
 const Contact = () => {
@@ -17,7 +18,21 @@ const Contact = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    alert("Thank you for reaching out! We'll get back to you soon.");
+
+    // Use EmailJS to send the email
+    emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', e.target, 'YOUR_USER_ID')
+      .then((result) => {
+        alert("Thank you for reaching out! We'll get back to you soon.");
+      }, (error) => {
+        alert("Oops! Something went wrong. Please try again later.");
+      });
+
+    // Clear the form
+    setFormData({
+      name: '',
+      email: '',
+      message: ''
+    });
   };
 
   return (

@@ -1,4 +1,3 @@
-// Importing React and CSS
 import React from 'react';
 import './carouselSection.css';
 
@@ -17,8 +16,11 @@ import image12 from './images/greenT3.jpg';
 import image13 from './images/cap3.jpg';
 
 // Carousel images array
-const images = [image1, image2, image3, image5, image6, image7, image8, image9, image10, image11, image12, image13];
-const extendedImages = [...images, ...images, ...images]; // Duplication for infinite scroll
+const images = [
+  image1, image2, image3, image5, image6,
+  image7, image8, image9, image10, image11,
+  image12, image13
+];
 
 const Carousel = () => {
   return (
@@ -26,9 +28,22 @@ const Carousel = () => {
       <h2 className="carousel-title">Our Latest Collection</h2>
       <div className="carousel">
         <div className="carousel-wrapper">
-          {extendedImages.map((image, index) => (
+          {/* Original set of images */}
+          {images.map((image, index) => (
             <div className="carousel-item" key={index}>
-              <img src={image} alt={`Carousel Image ${index + 1}`} />
+              <img src={image} alt={`Collection Item ${index + 1}`} />
+            </div>
+          ))}
+          {/* First duplicate set */}
+          {images.map((image, index) => (
+            <div className="carousel-item" key={`clone1-${index}`}>
+              <img src={image} alt={`Collection Item ${index + 1}`} />
+            </div>
+          ))}
+          {/* Second duplicate set for extra smoothness */}
+          {images.map((image, index) => (
+            <div className="carousel-item" key={`clone2-${index}`}>
+              <img src={image} alt={`Collection Item ${index + 1}`} />
             </div>
           ))}
         </div>
